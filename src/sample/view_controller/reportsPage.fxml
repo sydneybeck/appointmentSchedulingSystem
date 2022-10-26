@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="422.0" prefWidth="744.0" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view_controller.reportsPageController">
+    <children>
+
+        <TabPane layoutX="26.0" layoutY="61.0" prefHeight="300.0" prefWidth="681.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab fx:id="appointmentMetricsTab" text="Appointment Metrics">
+                    <content>
+                        <AnchorPane prefHeight="299.0" prefWidth="482.0">
+                            <children>
+                                <AnchorPane prefHeight="363.0" prefWidth="848.0">
+                                    <children>
+                                        <TableView fx:id="appointmentByTypeTableView" layoutX="67.0" layoutY="35.0" prefHeight="231.0" prefWidth="242.0">
+                                            <columns>
+                                                <TableColumn fx:id="appointmentTypeColumn" prefWidth="123.0" text="Appointment Type" />
+                                                <TableColumn fx:id="typeTotalColumn" prefWidth="118.0" text="Total" />
+                                            </columns>
+                                        </TableView>
+                                        <TableView fx:id="appointmentByMonthTableView" layoutX="343.0" layoutY="34.0" prefHeight="232.0" prefWidth="275.0">
+                                            <columns>
+                                                <TableColumn fx:id="appointmentMonthColumn" prefWidth="148.0" text="Appointment Month" />
+                                                <TableColumn fx:id="monthTotalColumn" prefWidth="126.0" text="Total" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </content>
+
+                </Tab>
+                <Tab fx:id="contactsScheduleTab" text="Contact Schedule">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="271.0" prefWidth="687.0">
+                            <children>
+                                <TableView fx:id="contactScheduleTableView" layoutX="2.0" layoutY="2.0" prefHeight="265.0" prefWidth="676.0">
+                                    <columns>
+                                        <TableColumn fx:id="contactNameColumn" prefWidth="108.0" text="Contact" />
+                                        <TableColumn fx:id="customerIDColumn" prefWidth="108.0" text="Customer ID" />
+                                        <TableColumn fx:id="titleColumn" prefWidth="114.0" text="Title" />
+                                        <TableColumn fx:id="typeColumn" prefWidth="114.0" text="Type" />
+                                        <TableColumn fx:id="startColumn" prefWidth="170.0" text="Start" />
+                                        <TableColumn fx:id="endColumn" prefWidth="169.0" text="End" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="loginRecordsTab" text="Login Records">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="271.0" prefWidth="465.0">
+                            <children>
+                                <TableView fx:id="loginRecordsTableView" layoutY="1.0" prefHeight="270.0" prefWidth="681.0">
+                                    <columns>
+                                        <TableColumn fx:id="userIDColumn" prefWidth="116.79993057250977" text="User ID" />
+                                        <TableColumn fx:id="userNameColumn" minWidth="-Infinity" prefWidth="172.0" text="Username" />
+                                        <TableColumn fx:id="timestampColumn" minWidth="-Infinity" prefWidth="225.0" text="Timestamp" />
+                                        <TableColumn fx:id="successfulColumn" minWidth="-Infinity" prefWidth="166.0" text="Login Successful?" />
+                                    </columns>
+                                </TableView>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+
+        <Label layoutX="345.0" layoutY="24.0" text="Reports">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="backButton" layoutX="666.0" layoutY="371.0" mnemonicParsing="false" onAction="#OnBackButtonClick" text="Back" />
+
+    </children>
+</AnchorPane>
